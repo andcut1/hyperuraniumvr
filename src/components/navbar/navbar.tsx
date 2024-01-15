@@ -3,7 +3,21 @@ import DropdownHover from '../dropdown-hover/dropdown-hover'
 
 function Navbar() {
     return (
-        <div className="navbar fixed bg-transparent">
+        <div className="fixed bg-transparent w-full flex justify-around items-center">
+            <DropdownHover name='HOME' items={['ITEM1', 'ITEM2']} />
+            <DropdownHover name='PAGES' items={['ITEM1', 'ITEM2']} />
+            <DropdownHover name='TOURNAMENT' items={['ITEM1', 'ITEM2']} />
+            <img src='https://hyperuraniumvr.com/images/icon.png' className='h-20' />
+            <DropdownHover name='BLOG' items={['ITEM1', 'ITEM2']} />
+            <DropdownHover name='SHOP' items={['ITEM1', 'ITEM2']} />
+            <DropdownHover name='LANDING' items={['ITEM1', 'ITEM2']} />
+        </div>
+    )
+}
+
+export default Navbar
+
+{/* <div className="navbar fixed bg-transparent">
             <div className="navbar-start lg:hidden">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost">
@@ -27,13 +41,9 @@ function Navbar() {
                 <DropdownHover name='HOME' items={['ITEM1', 'ITEM2']} />
                 <DropdownHover name='PAGES' items={['ITEM1', 'ITEM2']} />
                 <DropdownHover name='TOURNAMENT' items={['ITEM1', 'ITEM2']} />
-                <img src='https://hyperuraniumvr.com/images/logo.png' className='h-20' />
+                <img src='https://hyperuraniumvr.com/images/icon.png' className='h-20' />
                 <DropdownHover name='BLOG' items={['ITEM1', 'ITEM2']} />
                 <DropdownHover name='SHOP' items={['ITEM1', 'ITEM2']} />
                 <DropdownHover name='LANDING' items={['ITEM1', 'ITEM2']} />
             </div>
-        </div>
-    )
-}
-
-export default Navbar
+        </div> */}

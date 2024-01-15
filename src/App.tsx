@@ -1,6 +1,7 @@
 import './App.css';
 import Button from './components/button/button';
 import Navbar from './components/navbar/navbar';
+import { Flip } from "react-awesome-reveal";
 
 function App() {
   return (
@@ -8,11 +9,16 @@ function App() {
       <Navbar />
       <div className='flex justify-center items-center h-full'>
         <div>
-          <img src='https://overworld.qodeinteractive.com/wp-content/uploads/2020/01/Beat-the-game.png' />
-          <img src='https://overworld.qodeinteractive.com/wp-content/uploads/2019/10/main-home-rev-img-3.png' />
+          <Flip direction='horizontal'>
+            <img src='https://hyperuraniumvr.com/images/logo.png' className='w-[500px] z-0' />
+          </Flip>
           <div className="flex justify-between items-center mt-4">
-            <Button label='OUTLINED' outlined />
-            <Button label='FILLED' />
+            <Flip direction='horizontal' delay={500} >
+              <Button label='OUTLINED' outlined />
+            </Flip>
+            <Flip direction='horizontal'  >
+              <Button label='FILLED' />
+            </Flip>
           </div>
         </div>
       </div>
