@@ -1,5 +1,6 @@
 import './App.css';
 import Button from './components/button/button';
+import Footer from './components/footer/footer';
 import Navbar from './components/navbar/navbar';
 import { Flip } from "react-awesome-reveal";
 
@@ -21,6 +22,7 @@ function App() {
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     </>
   );
