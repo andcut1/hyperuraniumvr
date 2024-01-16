@@ -1,17 +1,37 @@
-import React from 'react'
+import React, { useState } from 'react'
 import DropdownHover from '../dropdown-hover/dropdown-hover'
+import NavIcon from './nav-icon'
+import HamburgerMenu from '../hamburger-menu/hamburger-menu'
+import Accordion from '../accordion/accordion'
 
 function Navbar() {
+    const [open, setOpen] = useState(false)
+
+    const toogleOpen = () => {
+        setOpen(!open)
+    }
+
     return (
-        <div className="fixed bg-transparent w-full flex justify-around items-center">
-            <DropdownHover name='HOME' items={['ITEM1', 'ITEM2']} />
-            <DropdownHover name='PAGES' items={['ITEM1', 'ITEM2']} />
-            <DropdownHover name='TOURNAMENT' items={['ITEM1', 'ITEM2']} />
-            <img src='https://hyperuraniumvr.com/images/icon.png' className='h-20' />
-            <DropdownHover name='BLOG' items={['ITEM1', 'ITEM2']} />
-            <DropdownHover name='SHOP' items={['ITEM1', 'ITEM2']} />
-            <DropdownHover name='LANDING' items={['ITEM1', 'ITEM2']} />
-        </div>
+        <>
+            <div className="relative lg:hidden h-[15vh]">
+                <div className="flex items-center justify-between px-10">
+                    <NavIcon />
+                    <HamburgerMenu onToggle={toogleOpen} />
+                </div>
+                <Accordion open={open} />
+            </div>
+            <div className="hidden lg:flex lg:justify-center lg:h-[15vh]">
+                <div className="bg-transparent w-3/4 flex justify-around items-center">
+                    <DropdownHover name='HOME' items={['ITEM1', 'ITEM2']} />
+                    <DropdownHover name='PAGES' items={['ITEM1', 'ITEM2']} />
+                    <DropdownHover name='TOURNAMENT' items={['ITEM1', 'ITEM2']} />
+                    <NavIcon />
+                    <DropdownHover name='BLOG' items={['ITEM1', 'ITEM2']} />
+                    <DropdownHover name='SHOP' items={['ITEM1', 'ITEM2']} />
+                    <DropdownHover name='LANDING' items={['ITEM1', 'ITEM2']} />
+                </div>
+            </div>
+        </>
     )
 }
 
