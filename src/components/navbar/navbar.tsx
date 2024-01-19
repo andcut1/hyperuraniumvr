@@ -13,7 +13,7 @@ function Navbar() {
 
     return (
         <>
-            <div className="relative lg:hidden h-[15vh]">
+            <div className="relative lg:hidden h-[15vh] sm:h-[15vh]">
                 <div className="flex items-center justify-between px-10">
                     <NavIcon />
                     <HamburgerMenu onToggle={toogleOpen} />

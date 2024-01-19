@@ -7,16 +7,16 @@ import { Flip } from 'react-awesome-reveal'
 function Footer() {
     return (
         <div className="bg-black">
-            <div className="flex h-32 items-center justify-around">
+            <div className="flex flex-col sm:flex-row min-h-32 items-center justify-around ">
                 <NavIcon />
                 <AncorHover label='home' />
                 <AncorHover label='boosting' />
                 <AncorHover label='esports' />
                 <AncorHover label='gamer' />
                 <AncorHover label='magazine' />
-                <Flip direction='horizontal' >
-                    <Button label='OUTLINED' className='mb-5 sm:m-0' outlined />
-                </Flip>
+                <div className='relative my-5 sm:m-0'>
+                    <Button label='OUTLINED' outlined />
+                </div>
             </div>
         </div>)
 }

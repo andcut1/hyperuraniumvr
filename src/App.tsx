@@ -1,27 +1,24 @@
 import './App.css';
-import Button from './components/button/button';
+import ContactUs from './components/contact-us/contact-us';
 import Footer from './components/footer/footer';
+import Home from './components/home/home';
+import InfiniteSlider from './components/infinite-slider/infinite-slider';
 import Navbar from './components/navbar/navbar';
-import { Flip } from "react-awesome-reveal";
+import Newsletter from './components/newsletter/newsletter';
+import VideoSection from './components/video-section/video-section';
 
 function App() {
   return (
     <>
-      <div className="bg-cover bg-[url('https://overworld.qodeinteractive.com/wp-content/uploads/2020/01/main-home-bckgd-img.jpg')] h-screen">
-        <Navbar />
-        <div className='flex justify-center items-center h-[85vh]'>
-          <div className='flex flex-col items-center sm:items-stretch sm:flex-none'>
-            <img src='https://hyperuraniumvr.com/images/logo.png' className='max-w-80 sm:max-w-lg' />
-            <div className="flex flex-col mt-4 sm:flex-row sm:justify-between sm:items-center">
-              <Flip direction='horizontal' delay={500} >
-                <Button label='OUTLINED' className='mb-5 sm:m-0' outlined />
-              </Flip>
-              <Flip direction='horizontal'  >
-                <Button label='FILLED' />
-              </Flip>
-            </div>
-          </div>
+      <div className="bg-cover bg-[url('https://overworld.qodeinteractive.com/wp-content/uploads/2020/01/main-home-bckgd-img.jpg')]">
+        <div className="sm:h-screen">
+          <Navbar />
+          <Home />
         </div>
+        <VideoSection />
+        <ContactUs />
+        <InfiniteSlider />
+        <Newsletter />
         <Footer />
       </div>
     </>

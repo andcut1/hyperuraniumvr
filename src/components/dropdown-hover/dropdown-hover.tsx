@@ -12,7 +12,7 @@ function DropdownHover({ items, name }: DropdownHoverProps) {
                 {name}
             </div>
             <div className="group-hover:block dropdown-menu absolute hidden h-auto z-[1] menu p-5 shadow bg-black bg-opacity-80 text-white w-52">
-                <Fade cascade>
+                <Fade cascade duration={500}>
                     <ul tabIndex={0} className="top-0">
                         {items.map(item => <li className="transition-transform transform hover:translate-x-4"><a className="hover:text-purple-600">{item}</a></li>)}
                     </ul>
