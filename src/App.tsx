@@ -1,4 +1,5 @@
 import './App.css';
+import CardSection from './components/card-section/card-section';
 import ContactUs from './components/contact-us/contact-us';
 import Footer from './components/footer/footer';
 import Home from './components/home/home';
@@ -16,6 +17,7 @@ function App() {
           <Home />
         </div>
         <VideoSection />
+        <CardSection />
         <ContactUs />
         <InfiniteSlider />
         <Newsletter />

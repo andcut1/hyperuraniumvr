@@ -4,7 +4,7 @@ import InputText from '../input-text/input-text'
 
 function ContactUs() {
     return (
-        <div className="mx-auto w-5/6 sm:h-screen flex items-center">
+        <div className="container mx-auto w-5/6 sm:h-screen flex items-center">
             <div className="flex flex-col w-full lg:flex-row lg:justify-between">
                 <div className="flex flex-col mb-10 lg:w-1/2">
                     <h3 className='uppercase text-white text-4xl mb-10 tracking-tight'>

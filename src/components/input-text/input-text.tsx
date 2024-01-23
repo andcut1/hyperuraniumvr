@@ -2,7 +2,14 @@ import './input-text.css'
 
 type InputTextProp = {
     placeholder: string
+    name?: string
+    value?: string
+    required?: boolean
+    pattern?: string
+    errorText?: string
+    error?: boolean
     className?: string
+    onChange?: () => void
 }
 
 function InputText({ className, placeholder }: InputTextProp) {
