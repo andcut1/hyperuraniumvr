@@ -1,20 +1,31 @@
+import { useState } from 'react'
 import './input-text.css'
 
 type InputTextProp = {
     placeholder: string
     name?: string
     value?: string
+    type: string
     required?: boolean
-    pattern?: string
     errorText?: string
-    error?: boolean
+    pattern?: string
     className?: string
-    onChange?: () => void
+    onChange?: React.ChangeEventHandler<HTMLInputElement>
 }
 
-function InputText({ className, placeholder }: InputTextProp) {
+function InputText({ className, placeholder, name, type, errorText, pattern, onChange }: InputTextProp) {
     return (
-        <input type="text" className={`bg-customBgInput text-gray-400 w-full p-6 capitalize ${className}`} placeholder={placeholder} />
+        <div className='w-full'>
+            <input
+                type={type}
+                name={name || ''}
+                className={`bg-customBgInput text-gray-400 p-6 w-full capitalize peer ${className}`}
+                placeholder={placeholder}
+                pattern={pattern}
+                onChange={onChange}
+            />
+            <span className={`mt-2 hidden text-sm text-red-500 peer-[&:not(:placeholder-shown):not(:focus):invalid]:block`}>{errorText}</span>
+        </div>
     )
 }
 
